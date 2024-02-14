@@ -1,0 +1,35 @@
+{% extends 'polls/navbar.html'%}
+    <style>
+        /* CSS styles for the about us section */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+    {% block content%}
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to the Polls Website, your go-to platform for creating and participating in polls on various topics!</p>
+        <p>Our mission is to provide an easy-to-use and engaging platform for users to create, share, and participate in polls. Whether you're a teacher looking for feedback from students, a business owner conducting market research, or just someone who wants to gather opinions from friends, Polls Website has got you covered.</p>
+    </div>
+    {% endblock content%}

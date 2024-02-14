@@ -1,0 +1,40 @@
+{% extends 'polls/navbar.html'%}
+<style>
+    /* Styles for poll container */
+.poll {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Styles for individual poll item */
+.poll-item {
+    /* Add specific styles for poll items */
+}
+
+/* Styles for poll link */
+.poll-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Styles for message when no polls are available */
+.no-polls {
+    font-style: italic;
+    color: #999;
+}
+
+</style>
+{% block content%}
+{% if latest_question_list %}
+    {% for question in latest_question_list %}
+    <div class="poll poll-item">
+        <a href="{% url 'polls:detail' question.id %}" class="poll-link">{{ question.question_text }}</a>
+    </div>
+    {% endfor %}
+{% else %}
+    <p class="no-polls">No polls are available.</p>
+{% endif %}
+{% endblock content%}
